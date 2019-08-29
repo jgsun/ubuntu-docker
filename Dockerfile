@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-MAINTAINER "Pan Guolin"
+MAINTAINER "jgsun"
 
 ENV PYTHONIOENCODING UTF-8
 ENV PYTHON_PATH /usr/bin/python3
