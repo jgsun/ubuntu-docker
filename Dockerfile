@@ -41,7 +41,8 @@ RUN apt-get -y install \
         g++ \
         make \
         cmake \
-        vim
+        vim \
+        sshfs
         
 # slim down image
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/man/?? /usr/share/man/??_*
