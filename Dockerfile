@@ -57,6 +57,6 @@ RUN curl -O https://bootstrap.pypa.io/get-pip.py && \
 # WORKDIR /home/ubuntu
 # ENV HOME /home/ubuntu
 
-COPY init /init
-ENTRYPOINT ["/init"]
+# COPY init /init
+# ENTRYPOINT ["/init"]
 CMD ["/bin/bash"]
