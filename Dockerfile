@@ -51,7 +51,11 @@ RUN curl -O https://bootstrap.pypa.io/get-pip.py && \
         python3 get-pip.py && \
         rm -rf get-pip.py
 
-# RUN useradd -ms /bin/bash ubuntu && \
+RUN useradd -ms /bin/bash jgsun && \
+	usermod -aG sudo jgsun && \
+	echo "root:123" | chpasswd && \
+	echo "jgsun:123" | chpasswd && \
+	sed -ri 's/^#PasswordAuthentication\s+.*/PasswordAuthentication yes/' /etc/ssh/sshd_config && \
 #     chown -R ubuntu:ubuntu /home/ubuntu
 # 
 # USER ubuntu
