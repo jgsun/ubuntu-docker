@@ -62,6 +62,6 @@ RUN useradd -ms /bin/bash jgsun && \
 # WORKDIR /home/ubuntu
 # ENV HOME /home/ubuntu
 
-# COPY init /init
-# ENTRYPOINT ["/init"]
+COPY init /init
+ENTRYPOINT ["/init"]
 CMD ["/bin/bash"]
